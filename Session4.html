@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h2>Session 4</h2>
+        <style>
+            table,th,td{
+                border:1px solid rgb(91, 95, 96)
+            }
+            th{
+                padding: 7px;
+            }
+            td{
+                padding: 5px;
+            }
+            input,label,select{
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>List and It's Types</h3>
+    <ol>
+        <li>One</li>
+        <li>Two
+        </li>
+        <li>Three</li>
+    </ol>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+    <dl>
+        <dt>Harsha1
+        </dt>
+        <dd>-Btech</dd>
+        <dt>Harsha2</dt>
+        <dd>CSE-A</dd>
+    </dl>
+
+    <h3>Table</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Marks</th>
+            <th rowspan="6">Rank</th>
+            <th rowspan="6">A+</th>
+        </tr>
+        <tr>
+            <td>Harsha10</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Dhinesh</td>
+            <td>101</td>
+        </tr>
+        <tr>
+            <td>Purushotham</td>
+            <td>102</td>
+        </tr>
+        <tr>
+            <td>Balaji</td>
+            <td>103</td>
+        </tr>
+        <tr>
+            <td>Sudha</td>
+            <td>104</td>
+        </tr>
+        <tr>
+            <th>Total marks</th>
+            <td colspan="3"><center>510</center></td>
+        </tr>
+
+    </table>
+    <h3>Forms</h3>
+    <legend>Personal Details</legend>
+    <form action="" method="">
+    <fieldset>
+    <label for="Name">Enter Name</label>
+    <input type="text">
+    <label for="Password">Enter Password</label>
+    <input type="password">
+    <label for="Mobile Number">Ph.No</label>
+    <input type="tel" maxlength="11">
+    <br>
+    </fieldset>
+    <legend>Select ur interest</legend>
+    <select name="" id="">
+        <option value="default">default</option>
+        <option value="music">music</option>
+        <option value="cinema">cinema</option>
+        <option value="sports">sports</option>
+    </select>
+    <legend>Year of Studying</legend>
+    <select name="" id="">
+        <option value="1">First Year</option>
+        <option value="2">Second Year </option>
+        <option value="3">Third Year</option>
+        <option value="4">Fourth Year</option>
+    </select>
+    <br>
+    <legend>Branch</legend>
+    <select name="" id="">
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="AI&ML">AI&ML</option>
+        <option value="Mech">Mech</option>
+    </select>
+    <legend>College</legend>
+    <label for="Name of the college">Name of the college</label>
+    <input type="text">
+    <input type="submit">
+    <legend>CheckBoxes</legend>
+    <input type="checkbox">
+    <label for="dell">I need dell lap</label>
+    <input type="checkbox">
+    <label for="Lenovo">I need Lenovo Lap</label>
+    <input type="checkbox">
+    <label for="HP">I need HP lap</label>
+    <br>
+    <legend>Radio</legend>
+    <input type="radio" name="lap">
+    <label for="dell">I need dell lap</label>
+    <input type="radio" name="lap">
+    <label for="Lenovo">I need Lenovo Lap</label>
+    <input type="radio" name="lap">
+    <label for="HP">I need HP lap</label>
+    <p>Click on the button to get Location</p>
+    <button onclick="getLocation">Try it</button>
+    <p id="demo"></p>
+    <script>
+        var x=document.getElementById("demo");
+        function getLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else{
+                x.innerHTML="geolocation not supported";
+            }
+        }
+        function showPosition(position){
+            const lat=position.coords.latitude;
+            const lon=position.coords.longitude;
+            x.innerHTML="latitude"+lat+"<br> longitude"+lon;
+        }
+    </script>
+    </form>
+    <form>
+    </body>
+</html>
